@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyleSheet, View, TextInput, Button, Text, FlatList, ActivityIndicator } from 'react-native'
 import FilmItem from './FilmItem'
+import Apropos from './Apropos'
 import { getFilmsFromApiWithSearchedText } from '../API/TMDBAPI'
 
 class Search extends React.Component {
@@ -81,6 +82,8 @@ class Search extends React.Component {
           }}
         />
         {this._displayLoading()}
+
+        <Button style={{ height: 50 }} title='A propos' onPress={() => Apropos('Apropos', { name: 'Apropos' })}/>
       </View>
     )
   }
