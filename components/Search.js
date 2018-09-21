@@ -60,7 +60,13 @@ class Search extends React.Component {
     }
   }
 
+  _Apropos = () => {
+    this.props.navigation.navigate('Apropos');
+  }
+
+
   render() {
+    const { Apropos } = this.props.navigation
     return (
       <View style={styles.main_container}>
         <TextInput
@@ -83,7 +89,7 @@ class Search extends React.Component {
         />
         {this._displayLoading()}
 
-        <Button style={{ height: 50 }} title='A propos' onPress={() => Apropos('Apropos', { name: 'Apropos' })}/>
+        <Button style={{ height: 50 }} title='A propos' onPress={this._Apropos}/>
       </View>
     )
   }

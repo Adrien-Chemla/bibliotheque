@@ -1,22 +1,30 @@
 import React from 'react'
-import { StyleSheet, View, Text, ActivityIndicator, ScrollView, Image } from 'react-native'
+import { StyleSheet, View, Text, Image } from 'react-native'
 
 class Apropos extends React.Component{
     render() {
         const { Apropos } = this.props
         return (
             <View style={styles.content_container}>
-                <Text>Mickael Filipe: étudiant Itescia</Text>
-                <Text>Aleksandar Grbovic: étudiant Itescia</Text>
-                <Text>Maxime Le Teno: étudiant Itescia</Text>
-                <Text>Adrien Chemla: étudiant Itescia</Text>
+                <Image style={{ width: 100, height: 150 }} source={require('../img/deadpool.jpg')}/>
+                <Text>Pseudo: Mike "Luzzy" F.</Text>
+                <Text>Devise : Donde ésta la bibliotheca ?!</Text>
+                <Image style={{ width: 100, height: 100 }} source={require('../img/vegeta.png')}/>
+                <Text>Pseudo: Aleksandar "HostiL" G.</Text>
+                <Text>Devise: In Tartiflette We Trust.</Text>
+                <Image style={{ width: 100, height: 100 }} source={require('../img/oiseau.jpg')}/>
+                <Text>Maxime "Camore The Pineapple" LT.</Text>
+                <Text>Devise: It's finger lickin good.</Text>
+                <Image style={{ width: 100, height: 100 }} source={require('../img/ryuji.png')}/>
+                <Text>Adrien "Déné" C.</Text>
+                <Text>Devise: ok ça marche pas, faut essayer autre chose.</Text>
             </View>
         )
       }
     }
 
     const styles = StyleSheet.create({
-        main_container: {
+        content_container: {
           height: 190,
           flexDirection: 'row'
         },
